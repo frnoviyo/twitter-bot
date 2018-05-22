@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Create your own auto direct message Twitter Bot 💬💬
 
@@ -152,6 +151,3 @@ Now is you your turn to think how you would like to introduce yourself. You can 
 
 
 It is easy, doesn’t it? you can read more code from the Github repo.
-=======
-# twitter-bot
->>>>>>> d02673c1d69af08cedb554a1d0cde2375c9d334e
