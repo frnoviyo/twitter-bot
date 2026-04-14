@@ -45,7 +45,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (1, 2, 3)
-              AND (M18COD * 3 + M19COD) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 3 + M19COD) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -65,7 +65,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (5, 6, 7, 8)
-              AND (M18COD * 4 + (M19COD - 4)) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 4 + (M19COD - 4)) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -85,7 +85,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (60, 61, 62, 63, 64, 65)
-              AND (M18COD * 6 + (M19COD - 59)) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 6 + (M19COD - 59)) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -104,7 +104,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (31, 33, 35, 37, 39, 41)
-              AND (M18COD * 6 + (M19COD - 31) / 2 + 1) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 6 + (M19COD - 31) / 2 + 1) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -123,7 +123,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (80, 81, 82, 83, 84, 85)
-              AND (M18COD * 6 + (M19COD - 79)) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 6 + (M19COD - 79)) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -143,7 +143,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD IN (11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22)
-              AND (M18COD * 12 + (M19COD - 10)) BETWEEN @seqMinimo AND @seqActual
+              AND (M18COD * 12 + (M19COD - 10)) >= @seqMinimo
         )
             SET @resultado = 'AS'
     END
@@ -159,7 +159,7 @@ BEGIN
             WHERE M12CAR = @M12CAR AND M01COD = @M01COD AND M02COD = @M02COD
               AND M03COD = @M03COD AND M04COD = @M04COD
               AND M19COD = 52
-              AND M18COD = @anioActual
+              AND M18COD >= @anioActual
         )
             SET @resultado = 'AS'
     END
